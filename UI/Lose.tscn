@@ -1,0 +1,75 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://UI/Main.gd" type="Script" id=1]
+[ext_resource path="res://Assets/zombie-halloween-creep-horror-499924.png" type="Texture" id=2]
+[ext_resource path="res://Assets/girl-29409_1280.png" type="Texture" id=3]
+
+[node name="Main" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect" type="ColorRect" parent="."]
+margin_right = 1024.0
+margin_bottom = 600.0
+color = Color( 0.411765, 0.117647, 0.117647, 1 )
+
+[node name="girl-29409_1280" type="Sprite" parent="."]
+modulate = Color( 1, 1, 1, 0.160784 )
+position = Vector2( 831.551, 532.031 )
+scale = Vector2( 0.8, 0.8 )
+texture = ExtResource( 3 )
+
+[node name="zombie-halloween-creep-horror-499924" type="Sprite" parent="."]
+modulate = Color( 1, 1, 1, 0.160784 )
+position = Vector2( 291.807, 350.246 )
+scale = Vector2( 0.3, 0.3 )
+texture = ExtResource( 2 )
+
+[node name="Label" type="Label" parent="."]
+margin_right = 1024.0
+margin_bottom = 300.0
+text = "The Queen of Hearts' Zombie Guards caught you!
+Luckily, you had a shrinking potion on hand and were able to escape with your head.
+After foraging for a growing mushroom, you've returned to your normal size.
+Would you like to try again?"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label2" type="Label" parent="."]
+margin_right = 1024.0
+margin_bottom = 150.0
+text = "OH MY FUR AND WHISKERS!"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Play" type="Button" parent="."]
+margin_left = 467.0
+margin_top = 300.0
+margin_right = 567.0
+margin_bottom = 340.0
+text = "Try Again"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Quit" type="Button" parent="."]
+margin_left = 467.0
+margin_top = 350.0
+margin_right = 567.0
+margin_bottom = 390.0
+text = "Quit"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="pressed" from="Play" to="." method="_on_Play_pressed"]
+[connection signal="pressed" from="Quit" to="." method="_on_Quit_pressed"]

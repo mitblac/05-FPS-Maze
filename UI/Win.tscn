@@ -1,0 +1,83 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://UI/Main.gd" type="Script" id=1]
+[ext_resource path="res://Assets/mad-28849_1280.png" type="Texture" id=2]
+[ext_resource path="res://Assets/alice-in-wonderland-30327_1280.png" type="Texture" id=3]
+[ext_resource path="res://Assets/118409-200.png" type="Texture" id=4]
+
+[node name="Main" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect" type="ColorRect" parent="."]
+margin_right = 1024.0
+margin_bottom = 600.0
+color = Color( 0.960784, 0.741176, 0.992157, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="118409-200" type="Sprite" parent="."]
+visible = false
+modulate = Color( 1, 1, 1, 0.160784 )
+position = Vector2( 122.253, 96.7922 )
+texture = ExtResource( 4 )
+
+[node name="mad-28849_1280" type="Sprite" parent="."]
+modulate = Color( 1, 1, 1, 0.160784 )
+position = Vector2( 811.589, 465.72 )
+scale = Vector2( 0.7, 0.7 )
+texture = ExtResource( 2 )
+
+[node name="alice-in-wonderland-30327_1280" type="Sprite" parent="."]
+modulate = Color( 1, 1, 1, 0.160784 )
+position = Vector2( 148.801, 320.163 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 3 )
+
+[node name="Label" type="Label" parent="."]
+margin_right = 1024.0
+margin_bottom = 300.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "You recovered the key to the Mad Hatter's Hat Closet and escaped the Queen's maze!
+To thank you, the Mad Hatter has thrown an Unbirthday Party in your honor.
+Have a very merry Unbirthday!"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label2" type="Label" parent="."]
+margin_right = 1024.0
+margin_bottom = 150.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "CONGRATULATIONS!"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Play" type="Button" parent="."]
+margin_left = 467.0
+margin_top = 300.0
+margin_right = 567.0
+margin_bottom = 340.0
+text = "Play Again"
+
+[node name="Quit" type="Button" parent="."]
+margin_left = 467.0
+margin_top = 350.0
+margin_right = 567.0
+margin_bottom = 390.0
+text = "Quit"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="pressed" from="Play" to="." method="_on_Play_pressed"]
+[connection signal="pressed" from="Quit" to="." method="_on_Quit_pressed"]
